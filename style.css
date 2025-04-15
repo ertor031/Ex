@@ -1,0 +1,85 @@
+.select-wrapper {
+  width: 450px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  position: relative;
+  padding: 16px;
+}
+.selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.selected span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+.selected img {
+  width: 20px;
+  height: 20px;
+}
+.dropdown {
+  position: absolute;
+  top: 90px;
+  left: 16px;
+  right: 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+
+  /* Анимация */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.dropdown.show {
+  max-height: 300px; /* регулируй по нужной высоте */
+  opacity: 1;
+}
+
+.dropdown input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.crypto-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.crypto-item:hover {
+  background-color: #f0f0f0;
+}
+.crypto-item img {
+  width: 20px;
+}
+
+.rate-display {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+.select-wrapper input[type="number"] {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
